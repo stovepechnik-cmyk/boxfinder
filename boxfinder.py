@@ -268,7 +268,8 @@ class BoxFinderApp(tk.Tk):
             lbl = tk.Label(th, text=text, bg=COLORS["bg_header"], fg=COLORS["muted"],
                            font=FONT_TINY, anchor=anchor, padx=6, pady=4)
             if w:
-                lbl.pack(side="left", width=w)
+                lbl.config(width=w // 8)  # convert px to chars approx
+                lbl.pack(side="left")
             else:
                 lbl.pack(side="left", fill="x", expand=True)
 
